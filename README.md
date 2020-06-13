@@ -41,4 +41,26 @@ sudo owfs --i2c=ALL:ALL --allow_other /mnt/
 browse to http://ip_or_raspberry:2121
 
 
+## setup rtc
+
+sudo echo ds1307 0x68 > /sys/class/i2c-adapter/i2c-1/new_device
+
+sleep 2
+
+sudo hwclock
+
+sudo hwclock -w
+
+sudo hwclock -s
+
+sudo apt-get -y remove fake-hwclock
+
+sudo rm /etc/cron.hourly/fake-hwclock
+
+sudo update-rc.d -f fake-hwclock remove
+
+sudo rm /etc/init.d/fake-hwclock
+
+sudo update-rc.d hwclock.sh enable
+
 
