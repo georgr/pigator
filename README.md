@@ -11,9 +11,11 @@ sudo raspi-config
 1. " Would you like the serial port hardware to be enabled?" -> Yes
 
 sudo vim /boot/config.txt
+
 add at the end of the file: 
 
 dtoverlay=disable-bt
+
 dtparam=i2c_arm=on
 
 sudo systemctl disable hciuart
@@ -29,6 +31,7 @@ sudo apt-get install owfs
 sudo vim /etc/owfs.conf
 
 #server: FAKE = DS18S20,DS2405
+
 server: i2c = ALL:ALL
 
 reboot the pi
