@@ -63,4 +63,12 @@ sudo rm /etc/init.d/fake-hwclock
 
 sudo update-rc.d hwclock.sh enable
 
+## install node-red
+
+apt install build-essential git
+
+
+## install knxd
+
+https://wiki.fhem.de/wiki/Knxd
 
