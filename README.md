@@ -71,6 +71,7 @@ apt install build-essential git
 ## install knxd
 
 https://wiki.fhem.de/wiki/Knxd
+https://community.openhab.org/t/guide-to-setup-knxd-with-busware-rot-on-raspberry-3b-as-knx-ip-gateway/66359
 
 sudo apt-get update
 
@@ -101,4 +102,14 @@ sudo reboot
 ls -ahl /dev/ttyKNX1 (lrwxrwxrwx 1 root root 7 Feb 14  2019 /dev/ttyKNX1 -> ttyAMA0)
 
 ls -ahl /dev/ttyAMA0 (crw-rw---- 1 knxd dialout 204, 64 Feb 14  2019 /dev/ttyAMA0)
+
+sudo vim /etc/knxd.conf
+
+KNXD_OPTS="-e 1.1.0 -E 1.1.100:28 -D -T -R -S -b tpuarts:/dev/ttyKNX1"
+
+systemctl status knxd.socket && systemctl status knxd.service
+
+sudo systemctl enable knxd.socket
+sudo systemctl enable knxd.service
+
 
