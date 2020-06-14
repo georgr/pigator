@@ -87,3 +87,18 @@ dpkg-buildpackage -b -uc
 cd ..
 
 sudo dpkg -i knxd_*.deb knxd-tools_*.deb
+
+sudo udevadm info -a /dev/ttyAMA0 | grep KERNELS.*serial
+
+sudo udevadm info -a /dev/ttyAMA0 | grep {id}
+
+sudo vim /etc/udev/rules.d/70-knxd.rules
+
+ACTION=="add", SUBSYSTEM=="tty", ATTRS{id}=="00241011", KERNELS=="3f201000.serial", SYMLINK+="ttyKNX1", OWNER="knxd"
+
+sudo reboot
+
+ls -ahl /dev/ttyKNX1 (lrwxrwxrwx 1 root root 7 Feb 14  2019 /dev/ttyKNX1 -> ttyAMA0)
+
+ls -ahl /dev/ttyAMA0 (crw-rw---- 1 knxd dialout 204, 64 Feb 14  2019 /dev/ttyAMA0)
+
