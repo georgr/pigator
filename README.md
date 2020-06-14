@@ -61,7 +61,7 @@ sudo update-rc.d -f fake-hwclock remove
 
 sudo rm /etc/init.d/fake-hwclock
 
-sudo update-rc.d hwclock.sh enable
+sudo systemctl enable hwclock.sh
 
 ## install node-red
 
