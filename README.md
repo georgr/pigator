@@ -72,3 +72,18 @@ apt install build-essential git
 
 https://wiki.fhem.de/wiki/Knxd
 
+sudo apt-get update
+
+sudo apt-get install debhelper cdbs automake libtool libusb-1.0-0-dev git-core build-essential libsystemd-dev dh-systemd libev-dev cmake
+
+git clone https://github.com/knxd/knxd.git
+
+cd knxd
+
+git checkout deb
+
+dpkg-buildpackage -b -uc
+
+cd ..
+
+sudo dpkg -i knxd_*.deb knxd-tools_*.deb
