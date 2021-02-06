@@ -126,3 +126,4 @@ apt update
 
 apt install homegear homegear-nodes-core homegear-management
 
+apt install homegear-homematicbidcos
