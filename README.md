@@ -116,3 +116,13 @@ sudo systemctl enable knxd.service
 
 https://doc.homegear.eu/homegear/installation.html
 
+apt install apt-transport-https
+
+wget https://apt.homegear.eu/Release.key && apt-key add Release.key && rm Release.key
+
+echo 'deb https://apt.homegear.eu/Raspbian/ buster/' >> /etc/apt/sources.list.d/homegear.list
+
+apt update
+
+apt install homegear homegear-nodes-core homegear-management
+
