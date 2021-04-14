@@ -118,7 +118,10 @@ systemctl status knxd.socket && systemctl status knxd.service
 sudo systemctl enable knxd.socket
 sudo systemctl enable knxd.service
 
-#homegear für homematic
+# homegear für homematic
+
+UART5 aufdrehen:
+/boot/config.txt -> dtoverlay=uart5
 
 https://doc.homegear.eu/homegear/installation.html
 
