@@ -138,3 +138,9 @@ apt update
 apt install homegear homegear-nodes-core homegear-management
 
 apt install homegear-homematicbidcos
+
+chmod -R root:root /etc/homegear/devices
+
+# traefik
+
+acme muss auf chmod 600 gestellt sein
