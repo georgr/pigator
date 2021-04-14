@@ -1,5 +1,9 @@
 # pigator
 
+## usb quirks
+
+ usb-storage.quirks=174c:55aa:u
+
 ## setup onewire
 
 
