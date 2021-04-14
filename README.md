@@ -118,6 +118,8 @@ systemctl status knxd.socket && systemctl status knxd.service
 sudo systemctl enable knxd.socket
 sudo systemctl enable knxd.service
 
+homeassistant tunnel ip in configuration.yml kontrolliren ob mit docker bridge ip aus ifconfig zusammenpasst
+
 # homegear für homematic
 
 UART5 aufdrehen:
