@@ -42,7 +42,9 @@ reboot the pi
 
 sudo owfs --i2c=ALL:ALL --allow_other /mnt/
 
-browse to http://ip_or_raspberry:2121
+ls /mnt/ as root
+
+not working: browse to http://ip_or_raspberry:2121
 
 
 ## setup rtc
@@ -85,7 +87,7 @@ git clone https://github.com/knxd/knxd.git
 
 cd knxd
 
-git checkout deb
+git checkout debian
 
 dpkg-buildpackage -b -uc
 
@@ -99,7 +101,7 @@ sudo udevadm info -a /dev/ttyAMA0 | grep {id}
 
 sudo vim /etc/udev/rules.d/70-knxd.rules
 
-ACTION=="add", SUBSYSTEM=="tty", ATTRS{id}=="00241011", KERNELS=="3f201000.serial", SYMLINK+="ttyKNX1", OWNER="knxd"
+ACTION=="add", SUBSYSTEM=="tty", ATTRS{id}=="00241011", KERNELS=="fe201000.serial", SYMLINK+="ttyKNX1", OWNER="knxd"
 
 sudo reboot
 
