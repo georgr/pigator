@@ -1,5 +1,7 @@
 # pigator
 
+https://busware.de/tiki-index.php?page=PIG_OW_Installation
+
 ## usb quirks
 
  usb-storage.quirks=174c:55aa:u
