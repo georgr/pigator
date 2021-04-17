@@ -28,7 +28,7 @@ sudo systemctl disable hciuart
 
 sudo vim /etc/modules
 
-add: i2c_dev
+dazugeben: i2c_dev
 
 sudo modprobe i2c_dev
 
