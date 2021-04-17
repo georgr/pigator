@@ -2,6 +2,20 @@
 
 https://busware.de/tiki-index.php?page=PIG_OW_Installation
 
+
+## power save
+
+dtoverlay=disable-wifi
+dtparam=act_led_trigger=none
+dtparam=act_led_activelow=on
+
+vim /et/rc.local
+/usr/bin/tvservice -o
+
+
+
+
+
 ## usb quirks
 
  usb-storage.quirks=174c:55aa:u
