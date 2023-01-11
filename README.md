@@ -147,7 +147,7 @@ apt install apt-transport-https
 
 wget https://apt.homegear.eu/Release.key && apt-key add Release.key && rm Release.key
 
-echo 'deb https://apt.homegear.eu/Raspbian/ buster/' >> /etc/apt/sources.list.d/homegear.list
+echo 'deb https://aptnightly.homegear.eu/Raspbian/ bullseye/' >> /etc/apt/sources.list.d/homegear.list
 
 apt update
 
