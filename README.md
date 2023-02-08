@@ -141,21 +141,6 @@ homeassistant tunnel ip in configuration.yml kontrolliren ob mit docker bridge i
 UART5 aufdrehen:
 /boot/config.txt -> dtoverlay=uart5
 
-https://doc.homegear.eu/homegear/installation.html
-
-apt install apt-transport-https
-
-wget https://apt.homegear.eu/Release.key && apt-key add Release.key && rm Release.key
-
-echo 'deb https://aptnightly.homegear.eu/Raspbian/ bullseye/' >> /etc/apt/sources.list.d/homegear.list
-
-apt update
-
-apt install homegear homegear-nodes-core homegear-management
-
-apt install homegear-homematicbidcos
-
-chmod -R root:root /etc/homegear/devices
 
 # traefik
 
