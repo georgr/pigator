@@ -141,6 +141,8 @@ homeassistant tunnel ip in configuration.yml kontrolliren ob mit docker bridge i
 UART5 aufdrehen:
 /boot/config.txt -> dtoverlay=uart5
 
+chmod 777 /sys/class/gpio/gpio16/value
+
 
 # traefik
 
