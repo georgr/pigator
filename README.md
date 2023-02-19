@@ -143,7 +143,6 @@ UART5 aufdrehen:
 
 If you’re using the official Raspbian, you need to comment the lines containing “gpio” in file /etc/udev/rules.d/99-com.rules (place a “#” at the beginning of the lines) for Homegear to be able to access the GPIOs.
 
-???? chmod 777 /sys/class/gpio/gpio16/value ???
 
 
 # traefik
