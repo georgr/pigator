@@ -141,7 +141,9 @@ homeassistant tunnel ip in configuration.yml kontrolliren ob mit docker bridge i
 UART5 aufdrehen:
 /boot/config.txt -> dtoverlay=uart5
 
-chmod 777 /sys/class/gpio/gpio16/value
+If you’re using the official Raspbian, you need to comment the lines containing “gpio” in file /etc/udev/rules.d/99-com.rules (place a “#” at the beginning of the lines) for Homegear to be able to access the GPIOs.
+
+???? chmod 777 /sys/class/gpio/gpio16/value ???
 
 
 # traefik
